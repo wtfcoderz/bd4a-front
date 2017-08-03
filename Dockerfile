@@ -1,5 +1,4 @@
-FROM	node:alpine as build
-WORKDIR	/src
+FROM	wtfcoderz/images:nodereact as build
 COPY	package.json /src
 RUN	npm install
 COPY	. /src
