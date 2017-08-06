@@ -6,13 +6,13 @@ import Register from '../pages/Register'
 export default class Main extends React.Component {
   render() {
     return (
-      <main>
+      <div style={{marginTop: "70px"}}>
         <Switch>
           <Route exact path='/' component={Login}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/register' component={Register}/>
         </Switch>
-      </main>
+      </div>
     )
   }
 }
