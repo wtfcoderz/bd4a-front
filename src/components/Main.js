@@ -6,7 +6,7 @@ import Register from '../pages/Register'
 export default class Main extends React.Component {
   render() {
     return (
-      <div style={{marginTop: "70px"}}>
+      <div style={{marginTop: "100px"}}>
         <Switch>
           <Route exact path='/' component={Login}/>
           <Route exact path='/login' component={Login}/>
