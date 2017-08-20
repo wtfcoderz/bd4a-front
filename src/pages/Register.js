@@ -8,7 +8,7 @@ export default class Register extends React.Component {
       email: '',
       email_check: '',
       password: '',
-      password_check: '',
+      password_check: ''
     }
   }
   onRegister() {
@@ -33,7 +33,7 @@ export default class Register extends React.Component {
 
   render () {
     return (
-      <div></div>
+      <div>Register</div>
     )
   }
 }
