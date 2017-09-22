@@ -6,7 +6,7 @@ import {
   Button,
   Icon
 } from 'semantic-ui-react'
-import axios from 'axios'
+import Axios from 'axios'
 
 export default class Header extends React.Component {
   constructor() {
@@ -18,15 +18,15 @@ export default class Header extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:10000/health')
+    Axios.get('http://localhost:10000/health')
       .then(res => {
-        console.log(res)
         this.setState({
           color: 'green',
           disabled: false
         })
       })
       .catch(err => {
+        console.log(err);
         this.setState({
           color: 'red',
           disabled: false

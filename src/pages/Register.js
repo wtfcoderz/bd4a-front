@@ -1,6 +1,7 @@
 import React from "react"
-import { Grid, Form, Segment } from 'semantic-ui-react'
-// import { Link } from 'react-router-dom'
+import { Grid, Segment, Header, Message } from 'semantic-ui-react'
+import Axios from 'axios'
+import { Form } from 'formsy-semantic-ui-react'
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -12,25 +13,6 @@ export default class Register extends React.Component {
       password_check: ''
     }
   }
-  onRegister() {
-    console.log('register')
-  }
-
-  validateEmail() {
-    console.log('validate mail')
-  }
-
-  validateEmailVerification() {
-    console.log('verify email')
-    this.validateEmail()
-  }
-
-  handleInputChange(ev) {
-    let target = ev.target
-    this.setState({
-      [target.id]: target.value
-    })
-  }
 
   render () {
     return (
@@ -38,10 +20,35 @@ export default class Register extends React.Component {
         <Grid.Column width={3}>
           <Form size='large'>
             <Segment>
-              <Form.Input fluid placeholder='Mail' icon='user' iconPosition='left'/>
-              <Form.Input fluid placeholder='Mail Verification' icon='user' iconPosition='left'/>
-              <Form.Input type='password' fluid placeholder='Password' icon='lock' iconPosition='left'/>
-              <Form.Input type='password' fluid placeholder='Password Vérification' icon='lock' iconPosition='left'/>
+              <Header>Register</Header>
+              <Form.Input
+                fluid
+                placeholder='Mail'
+                icon='user'
+                iconPosition='left'
+                validations='isEmail'
+                validationErrors={{ isEmail: 'Email is not valid' }}
+                errorLabel={ <Message icon='delete' negative size='mini' /> }
+                name='mail'/>
+              <Form.Input
+                fluid
+                placeholder='Mail Verification'
+                icon='user'
+                iconPosition='left'
+                name='mail_validation'/>
+              <Form.Input
+                type='password'
+                fluid
+                placeholder='Password'
+                icon='lock'
+                iconPosition='left'
+                name='password'/>
+              <Form.Input
+                type='password'
+                fluid placeholder='Password Vérification'
+                icon='lock'
+                iconPosition='left'
+                name='password_validation'/>
               <Form.Button fluid primary>Submit</Form.Button>
             </Segment>
           </Form>
