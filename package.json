@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "material-ui": "^1.0.0-beta.3",
-    "material-ui-icons": "^1.0.0-alpha.19",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "react-scripts": "1.0.10",
-    "redux": "^3.7.2"
+    "axios": "latest",
+    "formsy-react": "latest",
+    "formsy-semantic-ui-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "semantic-ui-react": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
